@@ -1,7 +1,7 @@
 {
   outputs = {pkgs, ...}: {
-    nixpkgs_overlays = [
-      (bitwig-studio.overrideAttrs (oldAttrs: rec {
+    overlays = [
+      (pkgs.bitwig-studio.overrideAttrs (oldAttrs: rec {
         version = "5.0.4";
         src = fetchurl {
           url = "https://downloads.bitwig.com/stable/${version}/bitwig-studio-${version}.deb";
