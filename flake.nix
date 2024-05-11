@@ -1,6 +1,5 @@
 {
   outputs = {...}: {
-    overlays = [
-    ];
+    homeManagerModules.default = {}: {};
   };
 }
